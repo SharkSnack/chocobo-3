@@ -1,2 +1,2 @@
-# Chocobo-3
+# chocobo-3
 Repository for a Chocobo's Mystery Dungeon 3 (Every Buddy!) gameplay resource website.
