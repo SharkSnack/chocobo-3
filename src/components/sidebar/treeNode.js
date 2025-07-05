@@ -26,86 +26,80 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   // crappy hardcoded fix to change sidebar item order and titles
   if (hasChildren) {
     switch (items[0].label) {
-      case 'identification-guide': // guides
-        items[0] = { items:[], label: 'postgame-guide', title: 'Postgame', url: '/guides/postgame-guide'};
-        items[1] = { items:[], label: 'item-locations', title: 'Item Locations', url: '/guides/item-locations'};
-        items[2] = { items:[], label: 'identification-guide', title: 'Identifying', url: '/guides/identification-guide'};
-        items[3] = { items:[], label: 'stealing-guide', title: 'Stealing', url: '/guides/stealing-guide'};
-        items[4] = { items:[], label: 'monster-trial-guide', title: 'Monster Trial', url: '/guides/monster-trial-guide'};
-        items[5] = { items:[], label: 'update-history', title: 'Update History', url: '/guides/update-history'};
+      case 'chapter-1': // guides
+        items[0] = { items:[], label: 'chapter-1', title: 'Chapter 1', url: '/story-guide/chapter-1'};
+        items[1] = { items:[], label: 'chapter-2', title: 'Chapter 2', url: '/story-guide/chapter-2'};
+        items[2] = { items:[], label: 'chapter-3', title: 'Chapter 3', url: '/story-guide/chapter-3'};
+        items[3] = { items:[], label: 'chapter-4', title: 'Chapter 4', url: '/story-guide/chapter-4'};
+        items[4] = { items:[], label: 'chapter-5', title: 'Chapter 5', url: '/story-guide/chapter-5'};
+        items[5] = { items:[], label: 'chapter-6', title: 'Chapter 6', url: '/story-guide/chapter-6'};
         break;
-      case 'bracelets': // items
-        items[0] = { items:[], label: 'price-chart', title: 'Price Chart', url: '/items/price-chart'};
-        items[1] = { items:[], label: 'weapons', title: 'Weapons', url: '/items/weapons'};
-        items[2] = { items:[], label: 'shields', title: 'Shields', url: '/items/shields'};
-        items[3] = { items:[], label: 'bracelets', title: 'Bracelets', url: '/items/bracelets'};
-        items[4] = { items:[], label: 'grass', title: 'Grass', url: '/items/grass'};
-        items[5] = { items:[], label: 'staves', title: 'Staves', url: '/items/staves'};
-        items[6] = { items:[], label: 'scrolls', title: 'Scrolls', url: '/items/scrolls'};
-        items[7] = { items:[], label: 'pots', title: 'Pots', url: '/items/pots'};
-        items[8] = { items:[], label: 'incense', title: 'Incense', url: '/items/incense'};
-        items[9] = { items:[], label: 'projectiles', title: 'Projectiles', url: '/items/projectiles'};
-        items[10] = { items:[], label: 'peach-bun', title: 'Peach Bun', url: '/items/peach-bun'};
-        items[11] = { items:[], label: 'food', title: 'Food', url: '/items/food'};
+      case 'books': // items
+        items[0] = { items:[], label: 'talons', title: 'Talons', url: '/items/talons'};
+        items[1] = { items:[], label: 'saddles', title: 'Saddles', url: '/items/saddles'};
+        items[2] = { items:[], label: 'collars', title: 'Collars', url: '/items/collars'};
+        items[3] = { items:[], label: 'greens', title: 'Greens', url: '/items/greens'};
+        items[4] = { items:[], label: 'medicines', title: 'Medicines', url: '/items/medicines'};
+        items[5] = { items:[], label: 'books', title: 'Books', url: '/items/books'};
+        items[6] = { items:[], label: 'flowers', title: 'Flowers', url: '/items/flowers'};
+        items[7] = { items:[], label: 'magicite', title: 'Magicite', url: '/items/magicite'};
+        items[8] = { items:[], label: 'other-items', title: 'Other', url: '/items/other-items'};
+        items[9] = { items:[], label: 'key-items', title: 'Key Items', url: '/items/key-items'};
         break;
-      case 'achievements': // system
-        items[0] = { items:[], label: 'gameplay-basics', title: 'Basics', url: '/system/gameplay-basics'};
-        items[1] = { items:[], label: 'equipment-resonance', title: 'Resonance', url: '/system/equipment-resonance'};
-        items[2] = { items:[], label: 'synthesis-runes', title: 'Runes', url: '/system/synthesis-runes'};
-        items[3] = { items:[], label: 'monsters', title: 'Monsters', url: '/system/monsters'};
-        items[4] = { items:[], label: 'traps', title: 'Traps', url: '/system/traps'};
-        items[5] = { items:[], label: 'travel-companions', title: 'Companions', url: '/system/travel-companions'};
-        items[6] = { items:[], label: 'roamers', title: 'Roamers', url: '/system/roamers'};
-        items[7] = { items:[], label: 'side-quests', title: 'Side Quests', url: '/system/side-quests'};
-        items[8] = { items:[], label: 'villages', title: 'Villages', url: '/system/villages'};
-        items[9] = { items:[], label: 'status-conditions', title: 'Status', url: '/system/status-conditions'};
-        items[10] = { items:[], label: 'sacred-tree', title: 'Sacred Tree', url: '/system/sacred-tree'};
-        items[11] = { items:[], label: 'monster-dojo', title: 'Monster Dojo', url: '/system/monster-dojo'};
-        items[12] = { items:[], label: 'achievements', title: 'Achievements', url: '/system/achievements'};
-        items[13] = { items:[], label: 'parallel-play', title: 'Parallel Play', url: '/system/parallel-play'};
-        items[14] = { items:[], label: 'wanderer-rescue', title: 'Rescue', url: '/system/wanderer-rescue'};
+      case 'buddy-registry': // system
+        items[0] = { items:[], label: 'jobs-and-stats', title: 'Jobs & Stats', url: '/system/jobs-and-stats'};
+        items[1] = { items:[], label: 'buddy-registry', title: 'Buddy Registry', url: '/system/buddy-registry'};
+        items[2] = { items:[], label: 'fishing', title: 'Fishing', url: '/system/fishing'};
+        items[3] = { items:[], label: 'gardening', title: 'Gardening', url: '/system/gardening'};
+        items[4] = { items:[], label: 'shops-and-forges', title: 'Shops & Forges', url: '/system/shops-and-forges'};
+        items[5] = { items:[], label: "goblin's-fortune", title: "Goblin's Fortune", url: "/system/goblin's-fortune"};
         break;
-      case 'battleground-of-the-rivals': // dungeons
-        items[0] = { items:[], label: 'serpentcoil-island', title: 'Serpentcoil Isle', url: '/dungeons/serpentcoil-island'};
-        items[1] = { items:[], label: 'secluded-path', title: 'Secluded Path', url: '/dungeons/secluded-path'};
-        items[2] = { items:[], label: 'ghost-ship', title: 'Ghost Ship', url: '/dungeons/ghost-ship'};
-        items[3] = { items:[], label: 'golden-highway', title: 'Gold Highway', url: '/dungeons/golden-highway'};
-        items[4] = { items:[], label: 'dune-of-batsu', title: 'Dune of Batsu', url: '/dungeons/dune-of-batsu'};
-        items[5] = { items:[], label: 'cavern-of-suiryu', title: 'Cave of Suiryu', url: '/dungeons/cavern-of-suiryu'};
-        items[6] = { items:[], label: 'yamakagashi-pass', title: 'Yamakagashi', url: '/dungeons/yamakagashi-pass'};
-        items[7] = { items:[], label: 'kiki-island', title: 'Kiki Island', url: '/dungeons/kiki-island'};
-        items[8] = { items:[], label: 'training-path-of-inference', title: 'Inference', url: '/dungeons/training-path-of-inference'};
-        items[9] = { items:[], label: 'training-path-of-extra-inference', title: 'Ex. Inference', url: '/dungeons/training-path-of-extra-inference'};
-        items[10] = { items:[], label: 'peach-dungeon', title: 'Peach', url: '/dungeons/peach-dungeon'};
-        items[11] = { items:[], label: 'sumo-dungeon', title: 'Sumo', url: '/dungeons/sumo-dungeon'};
-        items[12] = { items:[], label: "cat-ching's-divine-will", title: "Cat-Ching's", url: "/dungeons/cat-ching's-divine-will"};
-        items[13] = { items:[], label: "trapper's-secret-path", title: "Trapper's Path", url: "/dungeons/trapper's-secret-path"};
-        items[14] = { items:[], label: 'training-path-of-gimmicks', title: 'Gimmicks', url: '/dungeons/training-path-of-gimmicks'};
-        items[15] = { items:[], label: 'training-path-of-shopping', title: 'Shopping', url: '/dungeons/training-path-of-shopping'};
-        items[16] = { items:[], label: 'behemoth-rush', title: 'Behemoth', url: '/dungeons/behemoth-rush'};
-        items[17] = { items:[], label: 'sacred-ocean-tunnel', title: 'Sacred Ocean', url: '/dungeons/sacred-ocean-tunnel'};
-        items[18] = { items:[], label: 'domain-of-staves-and-scrolls', title: 'Staff & Scroll', url: '/dungeons/domain-of-staves-and-scrolls'};
-        items[19] = { items:[], label: 'isle-of-the-mighty', title: 'Isle of Mighty', url: '/dungeons/isle-of-the-mighty'};
-        items[20] = { items:[], label: 'heart-of-serpentcoil-island', title: 'Heart of Serp.', url: '/dungeons/heart-of-serpentcoil-island'};
-        items[21] = { items:[], label: 'go-go-dungeon', title: 'Go Go Dungeon', url: '/dungeons/go-go-dungeon'};
-        items[22] = { items:[], label: 'wanderers-highway', title: 'Wand. Highway', url: '/dungeons/wanderers-highway'};
-        items[23] = { items:[], label: 'quietude-of-serpentcoil-island', title: 'Quietude', url: '/dungeons/quietude-of-serpentcoil-island'};
-        items[24] = { items:[], label: 'training-path-of-hiding', title: 'Path of Hiding', url: '/dungeons/training-path-of-hiding'};
-        items[25] = { items:[], label: 'cliff-of-condensing', title: 'Condensing', url: '/dungeons/cliff-of-condensing'};
-        items[26] = { items:[], label: 'wild-monster-path', title: 'Monster Path', url: '/dungeons/wild-monster-path'};
-        items[27] = { items:[], label: 'forest-of-frugality', title: 'Frugality', url: '/dungeons/forest-of-frugality'};
-        items[28] = { items:[], label: 'researchers-experimental-site', title: "Researcher's", url: '/dungeons/researchers-experimental-site'};
-        items[29] = { items:[], label: 'winding-valley', title: 'Winding Valley', url: '/dungeons/winding-valley'};
-        items[30] = { items:[], label: 'clash-of-weapons-and-shields', title: 'Clash of W & S', url: '/dungeons/clash-of-weapons-and-shields'};
-        items[31] = { items:[], label: 'peachy-trap-domain', title: 'Peachy Trap', url: '/dungeons/peachy-trap-domain'};
-        items[32] = { items:[], label: 'training-path-of-deadly-strikes', title: 'Deadly Strikes', url: '/dungeons/training-path-of-deadly-strikes'};
-        items[33] = { items:[], label: 'battleground-of-the-rivals', title: 'Battleground', url: '/dungeons/battleground-of-the-rivals'};
-        items[34] = { items:[], label: 'timeworn-cave', title: 'Timeworn', url: '/dungeons/timeworn-cave'};
-        items[35] = { items:[], label: 'floral-garden', title: 'Floral Garden', url: '/dungeons/floral-garden'};
-        items[36] = { items:[], label: 'soul-of-serpentcoil-island', title: 'Soul of Serp.', url: '/dungeons/soul-of-serpentcoil-island'};
+      case "amouri's-memories": // story dungeons
+        items[0] = { items:[], label: 'the-tower-in-the-sands', title: 'Tower', url: '/story-dungeons/the-tower-in-the-sands'};
+        items[1] = { items:[], label: "mayor-gale's-memories", title: 'Gale', url: "/story-dungeons/mayor-gale's-memories"};
+        items[2] = { items:[], label: "cid's-memories", title: "Cid", url: "/story-dungeons/cid's-memories"};
+        items[3] = { items:[], label: "freja's-memories", title: "Freja", url: "/story-dungeons/freja's-memories"};
+        items[4] = { items:[], label: "guardian-of-the-flame", title: "Flame", url: "/story-dungeons/guardian-of-the-flame"};
+        items[5] = { items:[], label: "meja's-memories", title: "Meja", url: "/story-dungeons/meja's-memories"};
+        items[6] = { items:[], label: "guardian-of-the-water", title: "Water", url: "/story-dungeons/guardian-of-the-water"};
+        items[7] = { items:[], label: "shrima's-memories", title: "Shirma", url: "/story-dungeons/shirma's-memories"};
+        items[8] = { items:[], label: "guardian-of-the-light", title: "Light", url: "/story-dungeons/guardian-of-the-light"};
+        items[9] = { items:[], label: "ancient-ruins", title: "Ruins", url: "/story-dungeons/ancient-ruins"};
+        items[10] = { items:[], label: "amouri's-memories", title: "Amouri", url: "/story-dungeons/amouri's-memories"};
+        items[11] = { items:[], label: "guardian-of-the-dark", title: "Dark", url: "/story-dungeons/guardian-of-the-dark"};
+        items[12] = { items:[], label: "chocobo's-memories", title: "Chocobo", url: "/story-dungeons/chocobo's-memories"};
         break;
-      case 'notes': // other
-        items[0] = { items:[], label: 'notes', title: 'Notes', url: '/other/notes'};
+      case "a-maiden's-memories": // extra dungeons
+        items[0] = { items:[], label: "pastor-roche's-memories", title: "Roche", url: "/extra-dungeons/pastor-roche's-memories"};
+        items[1] = { items:[], label: "flora's-memories", title: "Flora", url: "/extra-dungeons/flora's-memories"};
+        items[2] = { items:[], label: "marris's-memories", title: "Marris", url: "/extra-dungeons/marris's-memories"};
+        items[3] = { items:[], label: "meddit's-memories", title: "Meddit", url: "/extra-dungeons/meddit's-memories"};
+        items[4] = { items:[], label: "harry's-memories", title: "Harry", url: "/extra-dungeons/harry's-memories"};
+        items[5] = { items:[], label: "charlotte's-memories", title: "Charlotte", url: "/extra-dungeons/charlotte's-memories"};
+        items[6] = { items:[], label: "stella's-memories", title: "Stella", url: "/extra-dungeons/stella's-memories"};
+        items[7] = { items:[], label: "dardola's-memories", title: "Dardola", url: "/extra-dungeons/dardola's-memories"};
+        items[8] = { items:[], label: "roddy's-memories", title: "Roddy", url: "/extra-dungeons/roddy's-memories"};
+        items[9] = { items:[], label: "claire's-memories", title: "Claire", url: "/extra-dungeons/claire's-memories"};
+        items[10] = { items:[], label: "volg's-memories", title: "Volg", url: "/extra-dungeons/volg's-memories"};
+        items[11] = { items:[], label: "croma's-memories", title: "Croma", url: "/extra-dungeons/croma's-memories"};
+        items[12] = { items:[], label: "a-maiden's-memories", title: "Maiden", url: "/extra-dungeons/a-maiden's-memories"};
+        items[13] = { items:[], label: "a-treasure-hunter's-memories", title: "Treasure", url: "/extra-dungeons/a-treasure-hunter's-memories"};
+        items[14] = { items:[], label: "insatiable-hunger", title: "Insatiable", url: "/extra-dungeons/insatiable-hunger"};
+        items[15] = { items:[], label: "another-white-mage's-memories", title: "White Mage", url: "/extra-dungeons/another-white-mage's-memories"};
+        items[16] = { items:[], label: "the-genius-inventor's-memories", title: "Inventor", url: "/extra-dungeons/the-genius-inventor's-memories"};
+        items[17] = { items:[], label: "the-keeper's-memories", title: "The Keeper", url: "/extra-dungeons/the-keeper's-memories"};
+        items[18] = { items:[], label: "pain-for-gain", title: "Pain for Gain", url: "/extra-dungeons/pain-for-gain"};
+        items[19] = { items:[], label: "flames-of-rebirth", title: "Rebirth", url: "/extra-dungeons/flames-of-rebirth"};
+        items[20] = { items:[], label: "lord-of-the-sea", title: "Sea Lord", url: "/extra-dungeons/lord-of-the-sea"};
+        items[21] = { items:[], label: "divine-judgment", title: "Judgment", url: "/extra-dungeons/divine-judgment"};
+        items[22] = { items:[], label: "the-great-dragon-king", title: "Dragon King", url: "/extra-dungeons/the-great-dragon-king"};
+        items[23] = { items:[], label: "six-elements", title: "Six Elements", url: "/extra-dungeons/six-elements"};
+        items[24] = { items:[], label: "dungeon-of-heroes", title: "Heroes", url: "/extra-dungeons/dungeon-of-heroes"};
+        items[25] = { items:[], label: "mystery-dungeon", title: "Mystery", url: "/extra-dungeons/mystery-dungeon"};
+        items[26] = { items:[], label: "interdimensional-rift", title: "Rift", url: "/extra-dungeons/interdimensional-rift"};
+        break;
+      case 'unused-data': // other
+        items[0] = { items:[], label: 'unused-data', title: 'Unused Data', url: '/other/unused-data'};
         break;
       default:
         // do nothing

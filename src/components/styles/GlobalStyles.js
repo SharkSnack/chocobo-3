@@ -287,7 +287,8 @@ export const baseStyles = css`
   }
 
   .navBarBrand img {
-    width: 40px;
+    width: 30px;
+    margin-left: 2px;
     margin-right: 6px;
     display: inline-block;
   }
@@ -591,7 +592,7 @@ export const baseStyles = css`
     text-align: left;
     margin: 0;
     padding: 3px 8px;
-    background-color: #fff6e5;
+    background-color: #fff9e5;
     font-weight: normal;
   }
 
@@ -668,10 +669,6 @@ export const baseStyles = css`
     position: relative !important;
     image-rendering: pixelated;
   }
-  .priceTableName {
-    text-align: left !important;
-    background-color: #f7f7f7;
-  }
   .priceTableSmallerFont th {
     font-size: 13px;
     padding: 3px;
@@ -712,17 +709,33 @@ export const baseStyles = css`
     background-color: #d4e2ff;
   }
   .monsterTable td {
-    padding-left: 2px;
-    padding-right: 3px;
+    padding: 4px;
     padding-top: 2px;
     padding-bottom: 2px;
-    font-size: 13.5px;
+    font-size: 12px;
   }
   .monsterTable img {
     position: relative !important;
-    max-height: 18px;
-    max-width: 18px;
-    border-radius: 5px;
+    height: 18px !important;
+  }
+  .monsterTable td:nth-of-type(2) {
+    /* background-color: #eee !important; */
+  }
+  .monsterTable td:nth-of-type(1) {
+    text-align: center;
+  }
+  .elementIcon img {
+    max-height: 20px !important;
+    max-width: 20px !important;
+  }
+  .dig {
+    background-color: #d9ebff !important;
+  }
+  .boss {
+    color: #8a00b0;
+  }
+  .special {
+    color: #ce0000;
   }
   #hideMonTblImgBtn {
     padding: 3px;
@@ -758,21 +771,6 @@ export const baseStyles = css`
   }
   .dungeonMonsterList td {
     padding: 3px;
-  }
-  .monsterListDay td:nth-of-type(1) {
-    background-color: #f7f7f7;
-    text-align: left;
-  }
-  .monsterListDay td:nth-of-type(2) {
-    background-color: #fffff6;
-    text-align: left;
-  }
-  .monsterListDay td:nth-of-type(8) {
-    text-align: left;
-  }
-  .monsterListDay td {
-    text-align: center;
-    padding: 4px;
   }
   .runeTable img {
     position: relative !important;
@@ -828,22 +826,6 @@ export const baseStyles = css`
     font-weight: bold;
     background-color: #482b0a;
   }
-  .pageLinksTable img {
-    position: relative !important;
-    border-radius: 10px;
-    width: 40px !important;
-    height: 40px !important;
-  }
-  .pageLinksTable th {
-    color: white;
-    font-weight: bold;
-    background-color: #482b0a;
-  }
-  .pageLinksTable tr:nth-of-type(2) th {
-    color: #3b454e;
-    text-align: center;
-    background-color: #ffffed;
-  }
   .roamerTable td:nth-of-type(1) {
     text-align: center;
     padding: 2px;
@@ -863,7 +845,7 @@ export const baseStyles = css`
     text-align: center;
     background-color: #ffffed;
   }
-  .equipmentTable td:nth-of-type(7) {
+  .equipmentTable td:nth-of-type(8) {
     text-align: left !important;
   }
   .statusTable th {
@@ -898,6 +880,14 @@ export const baseStyles = css`
     height: 20px !important;
     width: 20px !important;
   }
+  .brandImage img {
+    width: 20px !important;
+    position: relative !important;
+    vertical-align: sub !important;
+  }
+  .brandImage td:nth-of-type(7) {
+    padding: 0px !important;
+  }
   .monsterPageTable {
     margin: 0 0 15px 0;
   }
@@ -907,8 +897,8 @@ export const baseStyles = css`
     background-color: #482b0a;
   }
   .monsterPageFlex img {
+    width: 20px !important;
     position: relative !important;
-    border-radius: 10px;
   }
   .monsterPageFlex {
     display: flex;
@@ -925,7 +915,7 @@ export const baseStyles = css`
     box-sizing: border-box;
   }
   div.monster_table > div:nth-of-type(2) {
-    width: 471px;
+    width: 600px;
   }
   .monster_stats {
     padding: 2px 0px 2px 0px;
@@ -942,7 +932,7 @@ export const baseStyles = css`
     padding: 2px 4px 2px 4px;
   }
   div.monster_text {
-    background: #fff3de;
+    background: #fffce0;
     border-radius: 5px;
     padding: 4px 8px;
     font-size: 14px;
@@ -1047,17 +1037,42 @@ export const baseStyles = css`
   }
   .dungeonItemTable th {
     font-weight: normal;
-    background-color: #ececec;
     text-align: center;
-    padding: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
   .dungeonItemTable td {
     text-align: center;
     min-width: 25px;
-    padding-left: 3px;
-    padding-right: 3px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
+  }
+  .dungeonItemTable td:nth-of-type(1) {
+    text-align: left;
+  }
+  .dungeonItemTable img {
+    height: 16px !important;
+    position: relative !important;
+    vertical-align: sub !important;
+  }
+  .dungeonDropTable th {
+    font-weight: normal;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .dungeonDropTable td {
+    text-align: left;
+    min-width: 25px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  .dungeonDropTable td:nth-of-type(1) {
+    text-align: center;
+  }
+  .dungeonDropTable img {
+    position: relative !important;
+    height: 20px !important;
   }
   .itemTable th {
     text-align: center;
@@ -1084,6 +1099,150 @@ export const baseStyles = css`
   }
   .itemListTable td {
     padding: 2px;
+  }
+  .max {
+    color: #be94d7;
+  }
+  .maxHone {
+    background-color: #fff3f5;
+  }
+  .maxBase {
+    background-color: #efefff;
+  }
+  .maxSlot {
+    background-color: #fff6e5;
+  }
+  .yes {
+    background-color: #e6ffe6;
+  }
+  .no {
+    background-color: #fff0f0;
+  }
+  .notes {
+    color: #3365c6;
+  }
+  .hard {
+    color: #be94d7;
+  }
+  .unlock {
+    background-color: #cfe6ff !important;
+  }
+  .itemList img {
+    position: relative !important;
+    width: 18px !important;
+    padding: 0px !important;
+    height: auto;
+  }
+  .itemList th {
+    color: white;
+    font-weight: bold;
+    background-color: #482b0a;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .itemList tr:nth-of-type(2) th {
+    color: #3b454e;
+    text-align: center;
+    background-color: #ffffed;
+  }
+  .itemList td {
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .itemList td:nth-of-type(9) {
+    text-align: left;
+  }
+  .nonEquip td:nth-of-type(3) {
+    text-align: left;
+  }
+  .itemName {
+    text-align: left !important;
+    background-color: #f7f7f7;
+  }
+  .range {
+    background-color: #eee4d9;
+    padding: 0px !important;
+  }
+  .range img {
+    position: relative !important;
+    width: 30px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .abilityName {
+    background-color: #fff9e5 !important;
+  }
+  .statusResists {
+    background-color: #ffe8e8 !important;
+  }
+  .abilityTable th {
+    text-align: center;
+  }
+  .abilityTable td:nth-of-type(2) {
+    max-width: 540px;
+  }
+  .abilityTable td:nth-of-type(3),
+  .abilityTable td:nth-of-type(4),
+  .abilityTable td:nth-of-type(5),
+  .abilityTable td:nth-of-type(6),
+  .abilityTable td:nth-of-type(7),
+  .abilityTable td:nth-of-type(8), {
+    text-align: center;
+  }
+  .abilityTable td:nth-of-type(7) img {
+    position: relative !important;
+    width: 20px !important;
+  }
+  .abilityTable td:nth-of-type(8) img {
+    position: relative !important;
+    width: 30px !important;
+  }
+  .jobTable td:nth-of-type(1) {
+    text-align: center;
+  }
+  .jobTable img {
+    position: relative !important;
+    width: 30px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .jobTable td:nth-of-type(5) {
+    padding: 0px;
+    text-align: center;
+  }
+  .jobLinksTable th {
+    text-align: center;
+  }
+  .jobLinksTable td {
+    text-align: center;
+    min-width: 96.35px;
+  }
+  .jobLinksImage img {
+    position: relative !important;
+    width: 50px !important;
+  }
+  .sp {
+    background-color: #fffceb;
+  }
+  .hp {
+    background-color: #efe;
+  }
+  .atk {
+    background-color: #ffefef;
+  }
+  .def {
+    background-color: #edf9ff;
+  }
+  .mag {
+    background-color: #fdf4ff;
+  }
+  .mnd {
+    background-color: #f1fffe;
   }
   .itemListCentered th {
     text-align: center;
@@ -1127,6 +1286,12 @@ export const baseStyles = css`
   }
   .itemListName {
     text-align: left !important;
+  }
+  .unused td {
+    background-color: #dfdfdf;
+  }
+  .best {
+    background-color: #ffffde;
   }
   .summaryTable th {
     text-align: center;
@@ -1182,6 +1347,30 @@ export const baseStyles = css`
   .itemDetailsTable img {
     position: relative !important;
   }
+  .noPad td:nth-of-type(1) {
+    background-color: #eee;
+    padding: 0px !important;
+  }
+  .buddyOverview {
+    margin-bottom: 8px;
+  }
+  .buddyOverview th {
+    background-color: #eee;
+    font-weight: normal;
+    padding: 3px;
+    text-align: center;
+  }
+  .buddyOverview td {
+    text-align: center;
+    padding: 3px;
+  }
+  .buddyOverview img {
+    position: relative !important;
+    width: 20px !important;
+  }
+  .buddyOverview td:nth-of-type(1) img {
+    width: 60px !important;
+  }
   .dungeonOverview {
     margin-bottom: 8px;
   }
@@ -1193,21 +1382,37 @@ export const baseStyles = css`
   .dungeonOverview td {
     padding: 4px 8px;
   }
+  .dungeonNext th {
+    background-color: #e2fdf3;
+    padding: 4px 8px;
+  }
+  .dungeonNext td {
+    padding: 4px 8px;
+  }
   .dungeonTable img {
-    width: 24px !important;
+    height: 16px !important;
     position: relative !important;
+    vertical-align: sub !important;
   }
   .dungeonTable th {
     font-weight: normal;
   }
   .dungeonItems th {
     font-weight: normal;
-    text-align: center;
-    padding: 4px;
   }
-  .dungeonItems td {
+  .dungeonItems th:nth-of-type(1) {
     text-align: center;
-    padding: 4px;
+  }
+  .dungeonItems td:nth-of-type(1) {
+    text-align: center;
+  }
+  .dungeonItems td:nth-of-type(2) {
+    background-color: #eee;
+  }
+  .dungeonItems img {
+    position: relative !important;
+    max-height: 26px !important;
+    width: 24px !important;
   }
   .clearIcon {
     image-rendering: pixelated;
@@ -1466,8 +1671,23 @@ export const baseStyles = css`
   .highlightGreen2 {
     background-color: #F3FFF3;
   }
+  .highlightReaper {
+    background-color: #ffc4c4;
+  }
+  .highlightDuel {
+    background-color: #ffe3b9 !important;
+  }
+  .checkpoint {
+    color: #ff00bf;
+  }
+  .changeCrystal {
+    background-color: #d3f1ff !important;
+  }
   .highlightGray {
-    background-color: #eee !important;
+    background-color: #fbfbfb !important;
+  }
+  .highlightYellow {
+    background-color: #ffffe4 !important;
   }
   .highlightDarkGray {
     background-color: #dfdfdf !important;
@@ -1475,14 +1695,11 @@ export const baseStyles = css`
   .highlightGrey {
     background-color: #f4f4f4 !important;
   }
-  .highlightYellow {
-    background-color: #ffffe4 !important;
-  }
   .highlightYellow2 {
     background-color: #eeeedc !important;
   }
   .highlightPink {
-    background-color: #ffd3d3 !important;
+    background-color: #fff4f4 !important;
   }
   .highlightPink2 {
     background-color: #ffe9e9;
@@ -1503,6 +1720,9 @@ export const baseStyles = css`
   .highlightPurple3 {
     background-color: #dfb9ff !important;
   }
+  .highlightBoss {
+    background-color: #e5daff !important;
+  }
   .highlightBrown {
     background-color: #e6bba6;
   }
@@ -1516,7 +1736,7 @@ export const baseStyles = css`
     background-color: #fff4e6 !important;
   }
   .highlightOrange2 {
-    background-color: #ffe3b9;
+    background-color: #ffe3b9 !important;
   }
   .highlightOrange3 {
     background-color: #ffb23e;
@@ -1583,7 +1803,7 @@ export const baseStyles = css`
     color: #e33f3f;
   }
   .highlightShop {
-    background-color: #a8ffc6;
+    background-color: #a8ffc6 !important;
   }
   .highlightMH {
     background-color: #edcbff;
@@ -1647,44 +1867,6 @@ export const baseStyles = css`
   }
   .monsterNight {
     background-color: #edf4ff;
-  }
-  .monsterTableVillage {
-    background-color: #e5f7ff;
-  }
-  .monsterTableExtension {
-    background-color: #ffd5fa;
-  }
-  .monsterTableNdubba {
-    color: white;
-    background-color: #bb976a;
-  }
-  .monsterTableNtwyn {
-    color: white;
-    background-color: #99bfab;
-  }
-  .monsterTableSilver {
-    color: white;
-    background-color: #aaaaa0;
-  }
-  .monsterTableGold {
-    color: white;
-    background-color: #cece7e;
-  }
-  .monsterTableManeater {
-    color: white;
-    background-color: #b94c45;
-  }
-  .monsterTableVilleater {
-    color: white;
-    background-color: #d9c656;
-  }
-  .monsterTableMounteater {
-    color: white;
-    background-color: #349c53;
-  }
-  .monsterTableIsleater {
-    color: white;
-    background-color: #4d45cb;
   }
   .itemPageImage {
     background-color: #555;
@@ -1769,9 +1951,6 @@ export const baseStyles = css`
   .danger {
     background-color: #ffeded;
   }
-  .special {
-    background-color: #ffeed8;
-  }
   .ninjaTree {
     background-color: #c5ffc5;
   }
@@ -1813,9 +1992,6 @@ export const baseStyles = css`
   }
   .priceWhich {
     background-color: #fafad2 !important;
-  }
-  .priceCursed {
-    color: #be94d7;
   }
   .centeredText {
     text-align: center !important;
@@ -1965,6 +2141,12 @@ export const baseStyles = css`
   }
   .relativeImage img {
     position: relative !important;
+  }
+  .jobImage img {
+    position: relative !important;
+    width: 24px !important;
+    height: auto !important;
+    vertical-align: text-bottom !important;
   }
   .iconTable td:nth-of-type(1) {
     text-align: center;
@@ -2137,8 +2319,8 @@ export const baseStyles = css`
     font-size: 26px;
     font-weight: 800;
     line-height: 1.5;
-    margin-bottom: 8px;
-    margin-top: 12px;
+    margin-bottom: 6px;
+    margin-top: 6px;
   }
 
   .heading2 {
@@ -2148,6 +2330,11 @@ export const baseStyles = css`
     margin-bottom: 8px;
     margin-top: 12px;
   }
+  .heading2 img {
+    position: relative !important;
+    height: 18px !important;
+    width: auto;
+  }
 
   .heading3 {
     font-size: 20px;
@@ -2155,10 +2342,10 @@ export const baseStyles = css`
     line-height: 1.5;
     margin-bottom: 8px;
     margin-top: 16px;
-    border-left: 10px solid #ffbd76;
-    border-right: 1px solid #ffbd76;
-    border-bottom: 2px solid #ffbd76;
-    border-top: 1px solid #ffbd76;
+    border-left: 10px solid #ffec85;
+    border-right: 1px solid #ffec85;
+    border-bottom: 2px solid #ffec85;
+    border-top: 1px solid #ffec85;
     padding-left: 10px;
   }
 
@@ -2168,8 +2355,11 @@ export const baseStyles = css`
     line-height: 1.5;
     margin-bottom: 8px;
     margin-top: 12px;
-    border-left: 10px solid #ffbd76;
+    border-left: 10px solid #ffec85;
     padding-left: 6px;
+  }
+  .heading4 img {
+    position: relative !important;
   }
 
   .heading5 {
@@ -2178,7 +2368,7 @@ export const baseStyles = css`
     line-height: 1.5;
     margin-bottom: 8px;
     margin-top: 12px;
-    border-left: 6px solid #ffbd76;
+    border-left: 6px solid #ffec85;
     padding-left: 4px;
   }
 

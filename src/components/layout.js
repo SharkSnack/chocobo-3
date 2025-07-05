@@ -12,7 +12,6 @@ const Wrapper = styled('div')`
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.colors.background};
-  background-image: url(/images/site/bg.gif);
 
   .sideBarUL li a {
     color: ${({ theme }) => theme.colors.text};
