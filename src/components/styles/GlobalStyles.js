@@ -682,13 +682,8 @@ export const baseStyles = css`
     background-color: #ececec;
   }
   .tableDivider2 {
-    font-weight: normal;
     background-color: #ececec;
-    padding: 4px;
-  }
-  .tableDivider2 {
-    background-color: #bcddff;
-    padding-top: 2px !important;
+    padding-top: 0px !important;
   }
   .tableDivider3 {
     background-color: #ffe970;
@@ -1202,18 +1197,21 @@ export const baseStyles = css`
     position: relative !important;
     width: 30px !important;
   }
-  .jobTable td:nth-of-type(1) {
+  .jobTable th {
+    background-color: #eee;
+    font-weight: normal;
+    padding: 3px;
+    text-align: center;
+  }
+  .jobTable td {
     text-align: center;
   }
   .jobTable img {
     position: relative !important;
-    width: 30px !important;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    width: 20px !important;
   }
-  .jobTable td:nth-of-type(5) {
-    padding: 0px;
-    text-align: center;
+  .abi_desc {
+    max-width: 628px;
   }
   .jobLinksTable th {
     text-align: center;
